@@ -1,0 +1,15 @@
+﻿@using MvcApplication16.Models
+@model List<PersonProductItem>
+
+<h1>@Model[0].Title </h1>
+
+<img src="/Uploads/@Model[0].FileName" class="BigPic" height="500" /> <br />
+
+@for(int i = 0; i< Model.Count; i++)  
+{ 
+        <img src="/Uploads/@Model[i].FileName" class="SmallPics" style="width:100px;" />
+
+}<br>
+<h3>@Model[0].Description</h3><br />
+<h4>Name: @Model[0].FirstName @Model[0].LastName</h4>
+<h4>Phone Number: @Model[0].PhoneNumber</h4>

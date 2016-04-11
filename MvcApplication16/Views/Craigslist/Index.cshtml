@@ -1,0 +1,15 @@
+﻿@using MvcApplication16.Models
+@model IEnumerable<PersonProductItem>
+
+@foreach (PersonProductItem PPI in Model)
+{
+    <p><a href="freebie?Id=@PPI.PersonProductId"><h2>@PPI.Title</h2></a></p>
+    <a href="freebie?Id=@PPI.PersonProductId"><img src="/uploads/@PPI.FileName"></a><br />
+
+
+}
+@*<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+<script src="/Scripts/Javascript.js"></script>*@
+
+
+
